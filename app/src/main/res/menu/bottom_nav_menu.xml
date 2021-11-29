@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_previous"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_previous_24"
+        android:iconTint="@color/black"
+        android:title="Previous Workstation"
+
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_next"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_next_24"
+        android:iconTint="@color/black"
+        android:title="Next Wokstation"
+        app:showAsAction="ifRoom" />
+</menu>

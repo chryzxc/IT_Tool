@@ -1,0 +1,840 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WorkstationInfo">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Details" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabsa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:clickable="true"
+        android:hapticFeedbackEnabled="true"
+        android:visibility="gone"
+        app:backgroundTint="@color/secondary"
+        app:elevation="10dp"
+        app:fabSize="normal"
+        app:hideMotionSpec="@anim/to_bottom"
+        app:layout_constraintBottom_toTopOf="@+id/coordinatorLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:showMotionSpec="@anim/from_bottom"
+        app:srcCompat="@drawable/ic_baseline_save_24"
+        tools:ignore="VectorDrawableCompat" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/coordinatorLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@drawable/divider_drawable"
+                android:orientation="vertical"
+                android:paddingTop="10dp"
+                android:showDividers="end">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Workstation: "
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/wname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@null"
+                        android:clickable="false"
+                        android:editable="false"
+                        android:ellipsize="none"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center|left"
+                        android:hint="Workstation number"
+                        android:inputType="textPersonName|textCapWords"
+                        android:maxLength="10"
+                        android:textColor="@color/primary800"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/textView14"
+                        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:singleLine="true"
+                    android:text="Motherboard:" />
+
+                <EditText
+                    android:id="@+id/moB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="Barcode"
+                    android:inputType="textPersonName|textCapCharacters"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:maxLength="10"
+                    android:textAllCaps="false"
+                    android:textSize="14sp" />
+
+                <Spinner
+                    android:id="@+id/moS"
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0"
+                    android:spinnerMode="dialog" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:singleLine="true"
+                    android:text="Processor:" />
+
+                <EditText
+                    android:id="@+id/ppB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="Barcode"
+                    android:inputType="textPersonName|textCapCharacters"
+                    android:maxLength="10"
+                    android:textAllCaps="true"
+                    android:textSize="14sp" />
+
+                <Spinner
+                    android:id="@+id/ppS"
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    android:spinnerMode="dialog" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:singleLine="true"
+                    android:text="Memory:" />
+
+                <EditText
+                    android:id="@+id/mm1B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="Barcode"
+                    android:inputType="textPersonName|textCapCharacters"
+                    android:maxLength="10"
+                    android:singleLine="true"
+                    android:textAllCaps="true"
+                    android:textSize="14sp" />
+
+                <Spinner
+                    android:id="@+id/mm1S"
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    android:spinnerMode="dialog" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0" />
+
+                <EditText
+                    android:id="@+id/mm2B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="Barcode"
+                    android:inputType="textPersonName|textCapCharacters"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:maxLength="10"
+                    android:singleLine="true"
+                    android:textAllCaps="true"
+                    android:textSize="14sp" />
+
+                <Spinner
+                    android:id="@+id/mm2S"
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    android:spinnerMode="dialog" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text="Lan Card:" />
+
+                <EditText
+                    android:id="@+id/lcB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="Barcode"
+                    android:inputType="textPersonName|textCapCharacters"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:maxLength="10"
+                    android:singleLine="true"
+                    android:textAllCaps="true"
+                    android:textSize="14sp" />
+
+                <Spinner
+                    android:id="@+id/lcS"
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    android:spinnerMode="dialog" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:singleLine="true"
+                    android:text="Video Card:" />
+
+                <EditText
+                    android:id="@+id/dmB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="Barcode"
+                    android:inputType="textPersonName|textCapCharacters"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:maxLength="10"
+                    android:textAllCaps="true"
+                    android:textSize="14sp" />
+
+                <Spinner
+                    android:id="@+id/dmS"
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    android:spinnerMode="dialog" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:singleLine="true"
+                    android:text="Hard Disk:" />
+
+                <EditText
+                    android:id="@+id/hd1B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="Barcode"
+                    android:inputType="textPersonName|textCapCharacters"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:maxLength="10"
+                    android:textSize="14sp" />
+
+                <Spinner
+                    android:id="@+id/hd1S"
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    android:spinnerMode="dialog" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0" />
+
+                <EditText
+                    android:id="@+id/hd2B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="Barcode"
+                    android:inputType="textPersonName|textCapCharacters"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:maxLength="10"
+                    android:singleLine="true"
+                    android:textAllCaps="true"
+                    android:textSize="14sp" />
+
+                <Spinner
+                    android:id="@+id/hd2S"
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    android:spinnerMode="dialog" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:singleLine="true"
+                    android:text="Power Supply:" />
+
+                <EditText
+                    android:id="@+id/pwB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="Barcode"
+                    android:inputType="textPersonName|textCapCharacters"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:maxLength="10"
+                    android:singleLine="true"
+                    android:textSize="14sp" />
+
+                <Spinner
+                    android:id="@+id/pwS"
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    android:spinnerMode="dialog" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:singleLine="true"
+                    android:text="Casing:" />
+
+                <EditText
+                    android:id="@+id/ccB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="Barcode"
+                    android:inputType="textPersonName|textCapCharacters"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:maxLength="10"
+                    android:singleLine="true"
+                    android:textAllCaps="true"
+                    android:textSize="14sp" />
+
+                <Spinner
+                    android:id="@+id/ccS"
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    android:spinnerMode="dialog" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:singleLine="true"
+                    android:text="Monitor:" />
+
+                <EditText
+                    android:id="@+id/om1B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="Barcode"
+                    android:inputType="textPersonName|textCapCharacters"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:maxLength="10"
+                    android:singleLine="true"
+                    android:textAllCaps="true"
+                    android:textSize="14sp" />
+
+                <Spinner
+                    android:id="@+id/om1S"
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    android:spinnerMode="dialog" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0" />
+
+                <EditText
+                    android:id="@+id/om2B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="Barcode"
+                    android:inputType="textPersonName|textCapCharacters"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:maxLength="10"
+                    android:textAllCaps="true"
+                    android:textSize="14sp" />
+
+                <Spinner
+                    android:id="@+id/om2S"
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    android:spinnerMode="dialog" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:singleLine="true"
+                    android:text="Keyboard:" />
+
+                <EditText
+                    android:id="@+id/kbB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="Barcode"
+                    android:inputType="textPersonName|textCapCharacters"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:maxLength="10"
+                    android:singleLine="true"
+                    android:textAllCaps="true"
+                    android:textSize="14sp" />
+
+                <Spinner
+                    android:id="@+id/kbS"
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    android:spinnerMode="dialog" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:singleLine="true"
+                    android:text="Mouse:" />
+
+                <EditText
+                    android:id="@+id/msB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="Barcode"
+                    android:inputType="textPersonName|textCapCharacters"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:maxLength="10"
+                    android:textAllCaps="true"
+                    android:textSize="14sp" />
+
+                <Spinner
+                    android:id="@+id/msS"
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    android:spinnerMode="dialog" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="24dp">
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text="Ups:" />
+
+                <EditText
+                    android:id="@+id/upB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="Barcode"
+                    android:inputType="textPersonName|textCapCharacters"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:maxLength="10"
+                    android:singleLine="true"
+                    android:textAllCaps="true"
+                    android:textSize="14sp" />
+
+                <Spinner
+                    android:id="@+id/upS"
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    android:spinnerMode="dialog" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="24dp">
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:singleLine="true"
+                    android:text="Battery:" />
+
+                <EditText
+                    android:id="@+id/gqB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:capitalize="characters"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="Barcode"
+                    android:inputType="textPersonName"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:maxLength="10"
+                    android:singleLine="true"
+                    android:textAllCaps="true"
+                    android:textSize="14sp" />
+
+                <Spinner
+                    android:id="@+id/gqS"
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    android:spinnerMode="dialog" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:orientation="horizontal"></LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        app:layout_behavior="com.example.app.ScrollAwareFABBehavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottom_app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:backgroundTint="@color/primary900"
+            app:fabAlignmentMode="center"
+
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/nextLayout"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom|center"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple"
+                    android:gravity="bottom|center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/buttonNext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:clickable="false"
+                        android:paddingBottom="5dp"
+                        android:tint="?attr/colorButtonNormal"
+                        app:srcCompat="@drawable/ic_baseline_next_white_24" />
+
+                    <TextView
+                        android:id="@+id/textViewInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:gravity="center"
+                        android:paddingBottom="5dp"
+                        android:singleLine="true"
+                        android:text="Next"
+                        android:textColor="?attr/colorButtonNormal"
+                        android:textColorHint="#FFFFFF"
+                        android:textSize="10sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabScan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_scan_24"
+            android:text="Scan"
+            app:backgroundTint="@color/secondary"
+            app:layout_anchor="@id/bottom_app_bar"
+            app:rippleColor="#FFFFFF" />
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <com.nambimobile.widgets.efab.ExpandableFabLayout
+        android:id="@+id/expandable_fab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingRight="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/coordinatorLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.57"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <com.nambimobile.widgets.efab.ExpandableFab
+            android:id="@+id/expandable_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            app:efab_closingAnticipateTension="0"
+            app:efab_color="@color/secondary"
+            app:efab_fabOptionSize="normal"
+            app:efab_firstFabOptionMarginPx="100"
+            app:efab_icon="@drawable/ic_baseline_menu_24"
+            app:efab_iconAnimationRotationDeg="-400"
+            app:efab_successiveFabOptionMarginPx="100" />
+
+        <com.nambimobile.widgets.efab.FabOption
+            android:id="@+id/fabDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_color="@color/primary700"
+            app:fab_icon="@drawable/ic_baseline_delete_outline_24"
+            app:label_backgroundColor="@color/efab_label_background"
+            app:label_text="Delete"
+            app:label_textColor="@color/white" />
+
+        <com.nambimobile.widgets.efab.FabOption
+            android:id="@+id/fabSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_color="@color/primary700"
+            app:fab_icon="@drawable/ic_baseline_save_24"
+            app:label_backgroundColor="@color/efab_label_background"
+            app:label_text="Save" />
+
+    </com.nambimobile.widgets.efab.ExpandableFabLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -1,0 +1,27 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+
+
+    <style name="Theme.Christian" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primary900</item>
+        <item name="colorPrimaryVariant">@color/primary800</item>
+        <item name="colorOnPrimary">@color/primary600</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/primary700</item>
+        <item name="colorSecondaryVariant">@color/primary800</item>
+        <item name="colorOnSecondary">@color/primary700</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.Christian.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Christian.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Christian.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>
