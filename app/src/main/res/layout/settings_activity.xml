@@ -179,6 +179,7 @@
                                 android:layout_width="35dp"
                                 android:layout_height="35dp"
                                 android:layout_weight="0"
+                                android:background="@color/zxing_transparent"
                                 app:srcCompat="@drawable/ic_baseline_delete_24" />
                         </LinearLayout>
                     </LinearLayout>
@@ -216,6 +217,7 @@
                                 android:layout_width="35dp"
                                 android:layout_height="35dp"
                                 android:layout_weight="0"
+                                android:background="@color/zxing_transparent"
                                 app:srcCompat="@drawable/ic_baseline_delete_24" />
 
                         </LinearLayout>
@@ -254,6 +256,7 @@
                                 android:layout_width="35dp"
                                 android:layout_height="35dp"
                                 android:layout_weight="0"
+                                android:background="@color/zxing_transparent"
                                 app:srcCompat="@drawable/ic_baseline_delete_24" />
                         </LinearLayout>
                     </LinearLayout>
@@ -286,6 +289,7 @@
                             android:layout_width="35dp"
                             android:layout_height="35dp"
                             android:layout_weight="0"
+                            android:background="@color/zxing_transparent"
                             app:srcCompat="@drawable/ic_baseline_delete_24" />
 
                     </LinearLayout>
@@ -318,6 +322,7 @@
                             android:layout_width="35dp"
                             android:layout_height="35dp"
                             android:layout_weight="0"
+                            android:background="@color/zxing_transparent"
                             app:srcCompat="@drawable/ic_baseline_delete_24" />
 
                     </LinearLayout>
@@ -350,6 +355,7 @@
                             android:layout_width="35dp"
                             android:layout_height="35dp"
                             android:layout_weight="0"
+                            android:background="@color/zxing_transparent"
                             app:srcCompat="@drawable/ic_baseline_delete_24" />
 
                     </LinearLayout>
@@ -388,6 +394,7 @@
                                 android:layout_width="35dp"
                                 android:layout_height="35dp"
                                 android:layout_weight="0"
+                                android:background="@color/zxing_transparent"
                                 app:srcCompat="@drawable/ic_baseline_delete_24" />
                         </LinearLayout>
                     </LinearLayout>
@@ -426,6 +433,7 @@
                                 android:layout_width="35dp"
                                 android:layout_height="35dp"
                                 android:layout_weight="0"
+                                android:background="@color/zxing_transparent"
                                 app:srcCompat="@drawable/ic_baseline_delete_24" />
                         </LinearLayout>
                     </LinearLayout>
@@ -458,6 +466,7 @@
                             android:layout_width="35dp"
                             android:layout_height="35dp"
                             android:layout_weight="0"
+                            android:background="@color/zxing_transparent"
                             app:srcCompat="@drawable/ic_baseline_delete_24" />
 
                     </LinearLayout>
@@ -490,6 +499,7 @@
                             android:layout_width="35dp"
                             android:layout_height="35dp"
                             android:layout_weight="0"
+                            android:background="@color/zxing_transparent"
                             app:srcCompat="@drawable/ic_baseline_delete_24" />
 
                     </LinearLayout>
@@ -522,6 +532,7 @@
                             android:layout_width="35dp"
                             android:layout_height="35dp"
                             android:layout_weight="0"
+                            android:background="@color/zxing_transparent"
                             app:srcCompat="@drawable/ic_baseline_delete_24" />
 
                     </LinearLayout>
@@ -558,6 +569,7 @@
                                 android:layout_width="35dp"
                                 android:layout_height="35dp"
                                 android:layout_weight="0"
+                                android:background="@color/zxing_transparent"
                                 app:srcCompat="@drawable/ic_baseline_delete_24" />
                         </LinearLayout>
                     </LinearLayout>
@@ -595,6 +607,7 @@
                                 android:layout_width="35dp"
                                 android:layout_height="40dp"
                                 android:layout_weight="0"
+                                android:background="@color/zxing_transparent"
                                 app:srcCompat="@drawable/ic_baseline_delete_24" />
 
                         </LinearLayout>

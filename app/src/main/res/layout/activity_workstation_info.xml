@@ -5,6 +5,7 @@
     android:id="@+id/scrollView1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/cardview_shadow_start_color"
     tools:context=".WorkstationInfo">
 
 
@@ -12,13 +13,14 @@
         android:id="@+id/toolbar3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
+        android:background="@color/white"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="Details" />
+        app:title="Details"
+        app:titleTextColor="@color/black" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabsa"
@@ -77,6 +79,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Workstation: "
+                        android:textColor="@color/black"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -98,7 +101,7 @@
                         android:hint="Workstation number"
                         android:inputType="textPersonName|textCapWords"
                         android:maxLength="10"
-                        android:textColor="@color/primary800"
+                        android:textColor="@color/black"
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="@+id/textView14"
                         app:layout_constraintTop_toBottomOf="@+id/textView14" />
@@ -709,10 +712,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            app:backgroundTint="@color/primary900"
+            app:backgroundTint="@color/white"
             app:fabAlignmentMode="center"
 
-            />
+            app:fabCradleMargin="10dp"
+            app:fabCradleRoundedCornerRadius="30dp"
+            app:fabCradleVerticalOffset="10dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -741,7 +746,7 @@
                     android:layout_height="match_parent"
                     android:layout_gravity="bottom|center"
                     android:layout_weight="1"
-                    android:background="@drawable/ripple"
+                    android:background="@drawable/ripplewhite"
                     android:gravity="bottom|center"
                     android:orientation="vertical">
 
@@ -752,7 +757,7 @@
                         android:layout_gravity="bottom"
                         android:clickable="false"
                         android:paddingBottom="5dp"
-                        android:tint="?attr/colorButtonNormal"
+                        android:tint="@color/black"
                         app:srcCompat="@drawable/ic_baseline_next_white_24" />
 
                     <TextView
@@ -764,8 +769,8 @@
                         android:paddingBottom="5dp"
                         android:singleLine="true"
                         android:text="Next"
-                        android:textColor="?attr/colorButtonNormal"
-                        android:textColorHint="#FFFFFF"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
                         android:textSize="10sp" />
                 </LinearLayout>
             </LinearLayout>
@@ -779,9 +784,9 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_baseline_scan_24"
             android:text="Scan"
-            app:backgroundTint="@color/secondary"
+            app:backgroundTint="@color/white"
             app:layout_anchor="@id/bottom_app_bar"
-            app:rippleColor="#FFFFFF" />
+            app:rippleColor="@color/black" />
 
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>

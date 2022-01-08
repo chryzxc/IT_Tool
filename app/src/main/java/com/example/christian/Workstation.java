@@ -294,6 +294,12 @@ public class Workstation extends AppCompatActivity {
             {
                 // Code for above or equal 23 API Oriented Device
                 // Your Permission granted already .Do next code
+                try {
+                    exportCSV();
+                } catch (IOException e) {
+                    Toast.makeText(this, e.getMessage().toString(), Toast.LENGTH_SHORT).show();
+                    e.printStackTrace();
+                }
             } else {
                 requestPermission(); // Code for permission
             }
@@ -438,6 +444,7 @@ public class Workstation extends AppCompatActivity {
 
 
             writer.writeAll(dataOutput); // data is adding to csv
+            Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show();
 
 
 
